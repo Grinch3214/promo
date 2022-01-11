@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link type="image/x-icon" rel="shortcut icon" href="images/icons/favicon.svg">
+	<link type="image/png" sizes="32x32" rel="icon" href="images/icons/favicon.png">	
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+	<header class="header">
+		<div class="radius-background"></div>
+		<div class="radial-background"></div>
+		<div class="container z-index-20">
+			<nav class="d-flex justify-content-between align-items-center pt-4 pt-md-3">
+				<div class="d-flex align-items-center">
+					<div class="change__lang" tabindex="1">
+						<div class="dropholder">
+							<div class="dropdown">
+								<p class="holder">RU</p>
+							</div>
+							<ul class="dropdown-option">
+								<li tabindex="-1">RU</li>
+								<li tabindex="-1">EN</li>
+							</ul>
+						</div>
+					</div>
+					<!-- Нарощенный блок -->
+					<div class="subscription ml-4">
+						<button id="subscripBtn" class="subscription__btn">Подписка</button>
+						<div id="subscripContainer" class="subscription__list">
+
+							<div class="subscription__radio">
+
+								<div class="d-flex justify-content-between">
+									<div class="subscription__form-radio">
+										<input id="month-subscription" type="radio" name="radio" value="month" checked>
+										<label for="month-subscription">Месячная</label>
+									</div>
+					
+									<div class="subscription__form-radio flex-grow-1">
+										<input id="year-subscription" type="radio" name="radio" value="year">
+										<label for="year-subscription">Годовая</label>
+									</div>
+
+									<div class="subscription__form-radio radio-info">
+										<input id="info-subscription" type="radio" name="radio" value="info">
+										<label for="info-subscription"></label>
+									</div>
+								</div>								
+
+								<div class="subscription__content">
+									<div data-name="month" style="display: block">
+
+										<div class="subscription__card d-flex align-items-center justify-content-between">
+											<div class="d-flex flex-column subscription__card-price">
+												<h3 class="subscription__card-price--title">Базовый</h3>
+												<p class="subscription__card-price--text">
+													<span>$</span> 50 <span>/ месяц</span>
+												</p>
+											</div>
+											<div class="subscription__card-token">
+												<p class="subscription__card-token--price">1000</p>
+												<p class="subscription__card-token--token">токенов</p>
+											</div>
+										</div>
+
+										<div class="subscription__card d-flex align-items-center justify-content-between">
+											<div class="d-flex flex-column subscription__card-price">
+												<h3 class="subscription__card-price--title">Стандарт</h3>
+												<p class="subscription__card-price--text">
+													<span>$</span> 120 <span>/ месяц</span>
+												</p>
+											</div>
+											<div class="subscription__card-token">
+												<p class="subscription__card-token--price">2500</p>
+												<p class="subscription__card-token--token">токенов</p>
+											</div>
+										</div>
+
+										<div class="subscription__card d-flex align-items-center justify-content-between">
+											<div class="d-flex flex-column subscription__card-price">
+												<h3 class="subscription__card-price--title">Стандарт <span>+</span></h3>
+												<p class="subscription__card-price--text">
+													<span>$</span> 280 <span>/ месяц</span>
+												</p>
+											</div>
+											<div class="subscription__card-token">
+												<p class="subscription__card-token--price">6000</p>
+												<p class="subscription__card-token--token">токенов</p>
+											</div>
+										</div>
+
+										<div class="subscription__card d-flex align-items-center justify-content-between">
+											<div class="d-flex flex-column subscription__card-price">
+												<h3 class="subscription__card-price--title">Премиум</h3>
+												<p class="subscription__card-price--text">
+													<span>$</span> 650 <span>/ месяц</span>
+												</p>
+											</div>
+											<div class="subscription__card-token">
+												<p class="subscription__card-token--price">15000</p>
+												<p class="subscription__card-token--token">токенов</p>
+											</div>
+										</div>
+
+										<div class="subscription__card d-flex align-items-center justify-content-between">
+											<div class="d-flex flex-column subscription__card-price">
+												<h3 class="subscription__card-price--title">Энтерпрайз</h3>
+												<p class="subscription__card-price--unique">
+													Для компаний где более 800 сотрудников
+												</p>
+												<p class="subscription__card-price--unique">
+													Токены по этому тарифу устанавливаются индивидуально
+												</p>
+											</div>
+										</div>
+
+									</div>
+
+									<div data-name="year" style="display: none">
+										<div class="subscription__card d-flex align-items-center justify-content-between">
+											<div class="d-flex flex-column subscription__card-price">
+												<h3 class="subscription__card-price--title">Базовый</h3>
+												<p class="subscription__card-price--text">
+													<span>$</span> 42.5 <span>/ месяц</span>
+												</p>
+											</div>
+											<div class="subscription__card-token">
+												<p class="subscription__card-token--price">1000</p>
+												<p class="subscription__card-token--token">токенов</p>
+											</div>
+										</div>
+
+										<div class="subscription__card d-flex align-items-center justify-content-between">
+											<div class="d-flex flex-column subscription__card-price">
+												<h3 class="subscription__card-price--title">Стандарт</h3>
+												<p class="subscription__card-price--text">
+													<span>$</span> 102 <span>/ месяц</span>
+												</p>
+											</div>
+											<div class="subscription__card-token">
+												<p class="subscription__card-token--price">2500</p>
+												<p class="subscription__card-token--token">токенов</p>
+											</div>
+										</div>
+
+										<div class="subscription__card d-flex align-items-center justify-content-between">
+											<div class="d-flex flex-column subscription__card-price">
+												<h3 class="subscription__card-price--title">Стандарт <span>+</span></h3>
+												<p class="subscription__card-price--text">
+													<span>$</span> 238 <span>/ месяц</span>
+												</p>
+											</div>
+											<div class="subscription__card-token">
+												<p class="subscription__card-token--price">6000</p>
+												<p class="subscription__card-token--token">токенов</p>
+											</div>
+										</div>
+
+										<div class="subscription__card d-flex align-items-center justify-content-between">
+											<div class="d-flex flex-column subscription__card-price">
+												<h3 class="subscription__card-price--title">Премиум</h3>
+												<p class="subscription__card-price--text">
+													<span>$</span> 	552.5 <span>/ месяц</span>
+												</p>
+											</div>
+											<div class="subscription__card-token">
+												<p class="subscription__card-token--price">15000</p>
+												<p class="subscription__card-token--token">токенов</p>
+											</div>
+										</div>
+
+										<div class="subscription__card d-flex align-items-center justify-content-between">
+											<div class="d-flex flex-column subscription__card-price">
+												<h3 class="subscription__card-price--title">Энтерпрайз</h3>
+												<p class="subscription__card-price--unique">
+													Для компаний где более 800 сотрудников
+												</p>
+												<p class="subscription__card-price--unique">
+													Токены по этому тарифу устанавливаются индивидуально
+												</p>
+											</div>
+										</div>
+									</div>
+
+									<div data-name="info" style="display: none">
+										<div class="subscription__card d-flex align-items-center justify-content-between">
+											<div class="d-flex flex-column subscription__card-price">
+												<h3 class="subscription__card-price--title">Выбирайте комфортный тарифный план</h3>
+												<p class="subscription__card-price--unique">
+													Чтобы наш сервис был доступен каждому, мы разработали ряд тарифных планов с учетом потребностей компаний любого размера: от стартапов или студий до интерпрайз.
+												</p>
+
+												<h3 class="subscription__card-price--title">Каждая подписка включает:</h3>
+												<p class="subscription__card-price--unique unique-list">
+													Открытие контактов кандидата
+												</p>
+												<p class="subscription__card-price--unique unique-list">
+													Публикация вакансии от имени компании
+												</p>
+
+												<h3 class="subscription__card-price--title">Что такое токены?</h3>
+												<p class="subscription__card-price--unique">
+													Это наша особая валюта которая позволит использовать все уникальные  особенности платформы и сделать процесс найма максимально простым и быстрым.
+												</p>
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="header__buttons">
+					<button class="header__buttons-join global-btn">Вход</button>
+					<button class="header__buttons-registration global-btn d-none d-md-inline-block">Регистрация</button>
+				</div>
+			</nav>
+			<div class="header__inner">
+				<h1 class="header__title">
+					<a href="/"><img width="402" height="54" src="images/logo.svg" alt="AN.WORKS"></a>
+				</h1>
+				<h2 class="header__subtitle">
+					Твой незаменимый инструмент для поиска работы
+				</h2>
+				<p class="header__text">Оффер мечты уже ждёт тебя</p>
+				<div class="header__links">
+					<button class="header__links-registration global-btn">Регистрация</button>
+					<a class="header__links-link global-btn" href="employer/index.html">Компаниям</a>
+				</div>
+				<div class="header__animation">
+					<div class="header__soonimage d-none d-md-block">
+						<picture>
+							<source srcset="images/main_image.webp" type="image/webp">
+							<source srcset="images/main_image.png" type="image/jpeg">
+							<img width="920" height="534" src="images/main_image.png" alt="soon image">
+						</picture>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</header>
+
+	<main>
+		<section class="partners container">
+			<div class="partners__container">
+				<div id="hide-block" class="swiper-wrapper align-items-center">
+					<div class="swiper-slide">
+						<svg>
+							<use xlink:href="images/partners/sprite.svg#rademadesvg"></use>
+						</svg>
+					</div>
+					<div class="swiper-slide">
+						<svg>
+							<use xlink:href="images/partners/sprite.svg#epam"></use>
+						</svg>
+					</div>
+					<div class="swiper-slide">
+						<svg>
+							<use xlink:href="images/partners/sprite.svg#softserve"></use>
+						</svg>
+					</div>
+					<div class="swiper-slide">
+						<svg>
+							<use xlink:href="images/partners/sprite.svg#sevenpro"></use>
+						</svg>
+					</div>
+					<div class="swiper-slide">
+						<svg>
+							<use xlink:href="images/partners/sprite.svg#nix"></use>
+						</svg>
+					</div>
+					<div class="swiper-slide">
+						<svg>
+							<use xlink:href="images/partners/sprite.svg#boosteroid"></use>
+						</svg>
+					</div>
+				</div>
+				<h6 id="config-btn" class="partners__btn d-inline-block d-md-none">Посмотреть всё</h6>
+			</div>
+		</section>
+
+		<section class="unique">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-md-6 col-12">
+						<div class="unique__image">
+							<picture>
+								<source srcset="images/content/webp/image_1.webp" type="image/webp">
+								<source srcset="images/content/image_1.png" type="image/jpeg">
+								<img width="511" height="486" class="unique__image-item" src="images/content/image_1.png" alt="content image">
+							</picture>
+						</div>
+					</div>
+					<div class="col-md-6 col-12">
+						<div class="unique__inner ml-auto">
+							<h3 class="unique__title main-title">Проявить свою уникальность просто! </h3>
+							<p class="unique__text main-text">
+								Очень часто молодым IT-специалистам трудно найти работу: нет практического опыта, а навык самопрезентация, как у старших коллег, еще не развит; однообразные резюме составленные по шаблону и пустота в графе “опыт работы”. 
+							</p>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="promo">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-md-6 col-12 order-2 order-md-1">
+						<div class="promo__inner">
+							<div class="promo__block">
+								<h3 class="promo-title-a promo__block-title main-title">Мы — твоя уникальность</h3>
+								<p class="promo-text-a promo__block-text main-text">
+									Даём оценку твоим реальным навыкам, чтобы рекрутер сразу видел все твои сильные стороны и знал твою реальную ценность. 
+								</p>
+							</div>
+							<div class="promo__block">
+								<h3 class="promo-title-b promo__block-title main-title">Полная защищенность</h3>
+								<p class="promo-text-b promo__block-text main-text">
+									Мы за анонимность, только соискатель принимает решение о раскрытии личных данных 
+								</p>
+							</div>
+							<div class="promo__block">
+								<h3 class="promo-title-c promo__block-title main-title">Максимальная скорость</h3>
+								<p class="promo-text-c promo__block-text main-text">
+									Самое быстрое трудоустройство благодаря тестированию и предварительной оценке кандидата
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-12 order-1 order-md-2">
+						<div class="promo__image ml-auto">
+							<picture>
+								<source srcset="images/content/webp/image_2.webp" type="image/webp">
+								<source srcset="images/content/image_2.png" type="image/jpeg">
+								<img width="511" height="486" class="promo__image-item" src="images/content/image_2.png" alt="content image">
+							</picture>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="accardion">
+			<div class="container">
+				<div class="row accardion__container">
+					<div class="col-12 col-md-6 accardion__items d-none d-lg-block">
+						<div class="accardion__image active">
+							<picture>
+								<source srcset="images/content/webp/image_4.webp" type="image/webp">
+								<source srcset="images/content/image_4.png" type="image/jpeg">
+								<img src="images/content/image_4.png" alt="content image" class="accardion__image-item" width="531" height="362">
+							</picture>
+						</div>
+						<div class="accardion__image">
+							<picture>
+								<source srcset="images/content/webp/image_4.webp" type="image/webp">
+								<source srcset="images/content/image_4.png" type="image/jpeg">
+								<img src="images/content/image_4.png" alt="content image" class="accardion__image-item" width="531" height="362">
+							</picture>
+						</div>
+						<div class="accardion__image">
+							<picture>
+								<source srcset="images/content/webp/image_4.webp" type="image/webp">
+								<source srcset="images/content/image_4.png" type="image/jpeg">
+								<img src="images/content/image_4.png" alt="content image" class="accardion__image-item" width="531" height="362">
+							</picture>
+						</div>
+						<div class="accardion__image">
+							<picture>
+								<source srcset="images/content/webp/image_4.webp" type="image/webp">
+								<source srcset="images/content/image_4.png" type="image/jpeg">
+								<img src="images/content/image_4.png" alt="content image" class="accardion__image-item" width="531" height="362">
+							</picture>
+						</div>
+						<div class="accardion__image">
+							<picture>
+								<source srcset="images/content/webp/image_4.webp" type="image/webp">
+								<source srcset="images/content/image_4.png" type="image/jpeg">
+								<img src="images/content/image_4.png" alt="content image" class="accardion__image-item" width="531" height="362">
+							</picture>
+						</div>
+					</div>
+					<div class="col-12 col-lg-6">
+						<div class="accardion__inner">
+							<h3 class="accardion__title main-title">Как легко и быстро получить работу мечты?</h3>
+							<div class="accardion__wrapper">
+
+								<div tabindex="0" class="accardion__elem active">
+									<h3 class="accardion__elem-title">Заполни профиль</h3>
+									<p class="accardion__elem-text">
+										После регистрации тебе нужно заполнить профиль. После заполнения у тебе будет доступно резюме, которое удовлетворит даже самого привередливого рекрутера
+									</p>
+									<p class="d-none d-md-block d-lg-none"><img width="560" height="382" src="images/content/image_4.png" alt="content image"></p>
+								</div>
+
+								<div tabindex="0" class="accardion__elem">
+									<h3 class="accardion__elem-title">Пройди тест</h3>
+									<p class="accardion__elem-text">
+										Особая система тестирования позволяет объективно оценить актуальный hard-skill.  Разрабатывая собственное тестирование, мы обратились к специалистам в области тестологии и создали  6-ти уровневый тест. <br>
+										Все оценивание сформировано на таксономии Блума
+									</p>
+									<p class="d-none d-md-block d-lg-none"><img width="560" height="382" src="images/content/image_4.png" alt="content image"></p>
+								</div>
+
+								<div tabindex="0" class="accardion__elem">
+									<h3 class="accardion__elem-title">Откликайся на вакансию </h3>
+									<p class="accardion__elem-text">
+										После тестирования все кандидаты попадают в динамическую рейтинговую систему и получают позицию соответствующую реальным навыкам.  
+									</p>
+									<p class="d-none d-md-block d-lg-none"><img width="560" height="382" src="images/content/image_4.png" alt="content image"></p>
+								</div>
+
+								<div tabindex="0" class="accardion__elem">
+									<h3 class="accardion__elem-title">Подтверди найм </h3>
+									<p class="accardion__elem-text">
+										Мы сократили путь оценки твоих качеств, что позволит быстрее получить долгожданный оффер и принять выгодное предложение 
+									</p>
+									<p class="d-none d-md-block d-lg-none"><img width="560" height="382" src="images/content/image_4.png" alt="content image"></p>
+								</div>
+
+								<div tabindex="0" class="accardion__elem">
+									<h3 class="accardion__elem-title">Приступай к работе! </h3>
+									<p class="accardion__elem-text">
+										Поздравляем! Ты на пути к работе своей мечты! 
+									</p>
+									<p class="d-none d-md-block d-lg-none"><img width="560" height="382" src="images/content/image_4.png" alt="content image"></p>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="footer">
+		<div class="background-figure"></div>
+		<div class="container z-index-20">
+			<h2 class="footer__logo">
+				<a href="/" class="footer__logo-link"><img width="160" height="21" src="images/logo_footer.svg" alt="footer logo"></a>
+			</h2>
+			<h3 class="footer__subtitle main-title">Вперед к успеху!</h3>
+			<p class="footer__text">Воспользуйтесь всеми преимуществами для поиска работы</p>
+			<div class="footer__button"><button class="footer__button-btn global-btn">Регистрация</button></div>
+			<div class="footer__bottom d-flex justify-content-center justify-content-lg-between align-items-center flex-wrap flex-column flex-lg-row">
+				<div class="footer__inner d-flex flex-column flex-md-row flex-wrap flex-lg-nowrap order-2 order-lg-1 justify-content-center justify-content-lg-between">
+					<div class="footer__inner-copy order-4 order-lg-1 ml-lg-0"><p>Copyright 2021</p></div>
+					
+					<a target="_blank" href="https://old.an.works/terms-of-use.html#privacy-policy" class="footer__inner-policy mb-3 mb-md-2 mb-lg-0 order-1 order-lg-2">Политика конфиденциальности  </a>
+					<a target="_blank" href="https://old.an.works/terms-of-use.html#cookie" class="footer__inner-coockie mb-3 mb-md-2 mb-lg-0 order-2 order-lg-3">Политика использования файлов cookie</a>
+					<a href="#" class="footer__inner-contacts order-3 order-lg-4 mb-md-2 mb-lg-0">Контакты</a>
+				</div>
+				<ul class="footer__social-list d-flex order-1 order-lg-2 mb-lg-0">
+					<li class="footer__social-item"><a target="_blank" href="https://t.me/anworks"></a></li>
+					<li class="footer__social-item"><a target="_blank" href="https://www.instagram.com/an.works.ukraine/"></a></li>
+					<li class="footer__social-item"><a target="_blank" href="https://www.facebook.com/an.works.ukraine/"></a></li>
+					<li class="footer__social-item"><a target="_blank" href="https://www.linkedin.com/company/anworks/about/"></a></li>
+				</ul>
+				
+			</div>
+		</div>
+	</footer>
+	
+	<script src="js/swiper-bundle.min.js"></script>
+	<script src="js/lang.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

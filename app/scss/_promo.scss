@@ -1,0 +1,110 @@
+.promo {
+    margin-bottom: 102px;
+    @media screen and (min-width: 425px) {
+        margin-bottom: 130px;
+    }
+    @media screen and (min-width: 768px) {
+        margin-bottom: 200px;
+    }
+
+    &__inner {
+        max-width: 511px;
+        @media screen and (min-width: 768px) {
+            max-width: 300px;
+        }
+        @media screen and (min-width: 992px) {
+            max-width: 421px;
+        }
+        @media screen and (min-width: 1200px) {
+            max-width: 511px;
+        }
+    }
+
+    // .promo__block
+
+    &__block {
+        margin-bottom: 38px;
+        padding-left: 55px;
+        position: relative;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            width: 36px;
+            height: 36px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image:url('../images/icons_sprites.svg');
+            background-position:0 -16px;
+            background-repeat:no-repeat;
+        }
+    }
+    &__block +  &__block{
+        &::before {
+            background-image:url('../images/icons_sprites.svg');
+            background-position:0 -198px;
+            background-repeat:no-repeat
+        }
+    }
+    &__block +  &__block + &__block{
+        &::before {
+            background-image:url('../images/icons_sprites.svg');
+            background-position:0 -89px;
+            background-repeat:no-repeat;
+        }
+    }
+
+    // .promo__block-title
+
+    &__block-title {
+        font-size: 20px;
+        line-height: 27px;
+        padding-bottom: 7px;
+        @media screen and (min-width: 1200px) {
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+
+    // .promo__block-text
+
+    &__block-text {
+    }
+
+    &__image {
+        max-width: 511px;
+        margin-bottom: 49px;
+        @media screen and (min-width: 425px) {
+            margin-bottom: 54px;
+        }
+        @media screen and (min-width: 768px) {
+            margin-bottom: 0;
+            max-width: 300px;
+        }
+        @media screen and (min-width: 992px) {
+            max-width: 421px;
+        }
+        @media screen and (min-width: 1200px) {
+            max-width: 511px;
+        }
+    }
+
+    &__image-item {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.employer-block {
+    &::before {
+        background-position:0 -270px;
+    }
+}
+.employer-block + .employer-block {
+    &::before {
+        background-position:0 -305px;
+    }
+}
