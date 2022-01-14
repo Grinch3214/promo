@@ -197,6 +197,7 @@ function changeURLLanfuage() {
   location.reload();
 };
 
+
 function changeLanguage() {
   let hash = window.location.hash;
   hash = hash.substr(1);
@@ -206,11 +207,12 @@ function changeLanguage() {
   }
 
   droplanguage.innerText = hash.toUpperCase();
+  
 
   if (typeof languages === 'undefined') {
     for(let key in langEmployer){
       let elem = document.querySelector(`.${key}`)
-      if (elem) {
+      if (elem && langEmployer[key][hash]) {
         elem.innerText = langEmployer[key][hash]
       }
     }
@@ -219,7 +221,7 @@ function changeLanguage() {
   if (typeof langEmployer === 'undefined') {
     for(let key in languages){
       let elem = document.querySelector(`.${key}`)
-      if (elem) {
+      if (elem && languages[key][hash]) {
         elem.innerText = languages[key][hash]
       }
     }
